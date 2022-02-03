@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://testsave.png" type="Texture" id=1]
+[ext_resource path="res://characters/testsave.png" type="Texture" id=1]
 [ext_resource path="res://characters/CharacterSprite.gd" type="Script" id=2]
 [ext_resource path="res://characters/SheetCharacter.gd" type="Script" id=3]
 
