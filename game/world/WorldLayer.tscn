@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://tilesets/tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://tilesets/tileset.tres" type="RTileSet" id=1]
 [ext_resource path="res://world/WorldLayer.gd" type="Script" id=2]
 
 
