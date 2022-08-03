@@ -11,6 +11,9 @@ game/.prop_tool_temp/**
 .sconsign.dblite
 .DS_Store
 
+export/**
+release/**
+
 .vs/*
 .kdev4/*
 .vscode/*
