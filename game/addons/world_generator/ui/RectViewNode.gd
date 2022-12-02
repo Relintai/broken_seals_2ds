@@ -38,7 +38,7 @@ func _draw():
 	draw_rect(Rect2(Vector2(), get_size()), _edited_resource_rect_color)
 	draw_rect(Rect2(Vector2(), get_size()), _edited_resource_rect_border_color, false, _editor_rect_border_size)
 	
-	var font : Font = get_font("font")
+	var font : Font = get_theme_font("font")
 	
 	var res_name : String = "NULL"
 	
@@ -51,10 +51,15 @@ func _draw():
 		res_cls = edited_resource.get_editor_class()
 	
 	draw_string(font, Vector2(_editor_rect_border_size, font.get_height()), res_name, _edited_resource_font_color)
-	draw_string(font, Vector2(_editor_rect_border_size, font.get_height() * 2), _editor_additional_text, _edited_resource_font_color, get_rect().size.x)
-	
+
 	if res_cls != "":
-		draw_string(font, Vector2(_editor_rect_border_size, font.get_height() * 3), res_cls, _edited_resource_font_color, get_rect().size.x)
+		draw_string(font, Vector2(_editor_rect_border_size, font.get_height() * 2), res_cls, _edited_resource_font_color, get_rect().size.x)
+
+	if _editor_additional_text != "":
+		draw_string(font, Vector2(_editor_rect_border_size, font.get_height() * 3), _editor_additional_text, _edited_resource_font_color, get_rect().size.x)
+	
+	if edited_resource:
+		edited_resource.eitor_draw_additional(self)
 
 func refresh() -> void:
 	if !edited_resource:
